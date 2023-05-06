@@ -1,17 +1,21 @@
-import { log } from 'console';
-
 {
-  // Javascript 💩
+  /**
+   * Javascript 💩
+   */
   function jsAdd(num1, num2) {
     return num1 + num2;
   }
 
-  // Typescript ✨
+  /**
+   * Typescript ✨
+   */
   function tsAdd(num1: number, num2: number): number {
     return num1 + num2;
   }
 
-  // Javascript 💩
+  /**
+   * Javascript 💩
+   */
   function jsFetchNum(id) {
     // code ...
     // code ...
@@ -21,7 +25,9 @@ import { log } from 'console';
   }
   jsFetchNum(200).then(num => console.log('jsFetchNum --->', num));
 
-  // Typescript ✨
+  /**
+   * Typescript ✨
+   */
   function tsFetchNum(id: number): Promise<number> {
     // code ...
     // code ...
@@ -32,7 +38,9 @@ import { log } from 'console';
 
   tsFetchNum(123).then(num => console.log('tsFetchNum --->', num));
 
-  // Javascript ✨ => Typescript
+  /**
+   * Javascript ✨ => Typescript
+   */
   // Optional parameter - 전달해도 되고, 전달하지 않아도 되는 것을 옵셔널 '?' 파라미터로 처리
   const printName = (firstName: string, lastName?: string) => {
     console.log('printName firstName --->', firstName);
