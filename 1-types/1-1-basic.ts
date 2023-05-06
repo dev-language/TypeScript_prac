@@ -14,7 +14,7 @@
   // boolean
   const boal: boolean = false;
 
-  // undefined
+  // undefined 💩
   let name: undefined; // 💩
   let age: number | undefined; //옵셔널 타입일때 사용 가능
   age = undefined;
@@ -24,7 +24,7 @@
     return undefined;
   }
 
-  // null
+  // null 💩
   let person: null; // 💩
   let person2: string | null; // 보편적으로 null 보다는 undifined를 많이 사용한다.
 
