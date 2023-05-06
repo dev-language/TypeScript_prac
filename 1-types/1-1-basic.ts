@@ -9,7 +9,7 @@
   const num: number = 1;
 
   // string
-  const str: string = 'hello';
+  const str: string = "hello";
 
   // boolean
   const boal: boolean = false;
@@ -30,17 +30,17 @@
 
   // unknown - 어떤 종류의 타입이 담길지 모름. 가능하면 싸지 말자 💩
   let notSure: unknown = 0;
-  notSure = 'seogun';
+  notSure = "seogun";
   notSure = true;
 
   // any - 어떤 종류든 담길 수 있음. 가능하면 쓰지 말자 💩
   let anything: any = 0;
-  anything = '서근';
+  anything = "서근";
   anything = true;
 
   // void - 아무것도 return 하지 않을 때 사용
   function print(): void {
-    console.log('hello');
+    console.log("hello");
     return;
   }
 
@@ -55,9 +55,9 @@
   // object - 원시 타입을 제외한 모든 object 타입을 담을 수 있다.
   let obj: object; // 💩
   function acceptSomeObject(obj: object) {
-    console.log('obj --->', Object.values(obj));
+    console.log("obj --->", Object.values(obj));
   }
 
-  acceptSomeObject({ name: 'seogun' });
-  acceptSomeObject({ animal: '강아지' });
+  acceptSomeObject({ name: "seogun" });
+  acceptSomeObject({ animal: "강아지" });
 }
