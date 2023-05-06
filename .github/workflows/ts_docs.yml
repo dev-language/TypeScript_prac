@@ -22,7 +22,7 @@ jobs:
         with:
           source-directory: 'output'
           destination-github-username: Seogun95
-          destination-repository-name: TypeScript_prac
+          destination-repository-name: TypeScript_docs
           user-email: ${{ secrets.DOCS_SECRET_EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
