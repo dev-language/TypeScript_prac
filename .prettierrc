@@ -3,7 +3,8 @@
     {
       "files": "*.md",
       "options": {
-        "proseWrap": "never"
+        "proseWrap": "never",
+        "singleQuote": true
       }
     }
   ]
