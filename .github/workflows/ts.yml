@@ -18,12 +18,12 @@ jobs:
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.DOCS_SECRET_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.TS_SECRET_TOKEN }}
         with:
           source-directory: 'output'
           destination-github-username: Seogun95
           destination-repository-name: TypeScript_docs
-          user-email: ${{ secrets.DOCS_SECRET_EMAIL }}
+          user-email: ${{ secrets.TS_SECRET_EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
       - name: Test get variable exported by push-to-another-repository
