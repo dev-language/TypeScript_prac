@@ -1,5 +1,5 @@
 #!/bin/sh
 cd ../
 mkdir output
-cp -R ./dev-language/* ./output
-cp -R ./output ./dev-language/
+cp -R ./TypeScript_prac/* ./output
+cp -R ./output ./TypeScript_prac/
