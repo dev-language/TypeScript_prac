@@ -2,9 +2,11 @@
   /**
    * Enum
    * 여러 상수 값을 한곳에 모아서 관리할 수 있는 타입
-   * 타입이 보장되고 타입의 값이 변화되지 않으므로 안전하게 타입을 관리할 수 있다.
    * enum에 값을 정하지 않으면 위에서부터 0부터 1씩 늘어난다.
    * enum에 기본값(숫자, 문자)을 정할 수 있다.
+
+   * 타입스크립트에서 enum은 타입이 정확하게 보장되지 않기 때문에 사용하지 않는것이 좋다.
+   * enum을 사용하지 않고 Union 타입을 사욯아는것이 좋다.
    */
 
   /* ======= JAVASCRIPT: 상수를 정의할때 대문자로 지정해주는것이 좋다. ======= */
@@ -39,27 +41,6 @@
   const MyCookie = Cookie.CookieName;
   console.log("Cookie.RefreshName --->", Cookie.RefreshName); // RefreshToken
   console.log("MyCookie --->", MyCookie); // AccessToken
-
-  /* ======= 함수도 enum에 작성 가능하다. ======= */
-
-  enum Colors {
-    Red = getColorCode("RED"),
-    Green = getColorCode("GREEN"),
-    Blue = getColorCode("BLUE"),
-  }
-
-  function getColorCode(color: string): number {
-    // 실제로는 color 값에 따라 적절한 컬러 코드를 계산하는 로직을 수행한다고 가정합니다.
-    if (color === "RED") 0xff0000; // 빨간색의 컬러 코드
-    else if (color === "GREEN") 0x00ff00; // 초록색의 컬러 코드
-    else if (color === "BLUE") 0x0000ff; // 파란색의 컬러 코드
-
-    return 0x000000;
-  }
-
-  console.log(Colors.Red); // 16711680
-  console.log(Colors.Green); // 65280
-  console.log(Colors.Blue); // 255
 
   enum Month {
     Jan = 1,
@@ -105,4 +86,23 @@
     Nov: 11,
     Dec: 12
   } */
+
+  /* ======= 함수도 enum에 작성 가능하다. ======= */
+
+  enum Colors {
+    Red = getColorCode("RED"),
+    Green = getColorCode("GREEN"),
+    Blue = getColorCode("BLUE"),
+  }
+
+  function getColorCode(color: string): number {
+    if (color === "RED") 0xff0000;
+    else if (color === "GREEN") 0x00ff00;
+    else if (color === "BLUE") 0x0000ff;
+    return 0x000000;
+  }
+
+  console.log(Colors.Red); // 16711680
+  console.log(Colors.Green); // 65280
+  console.log(Colors.Blue); // 255
 }
